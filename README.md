@@ -14,7 +14,7 @@ cd ~/code/T/dotfiles
 
 1. Installs `starship`, `fzf`, `zsh-autosuggestions`, `tmux` via brew (skips what's present)
 2. Initializes the [tpm](https://github.com/tmux-plugins/tpm) submodule
-3. Symlinks `.zshrc`, `.tmux.conf`, and `.tmux/plugins/tpm` into `$HOME` (existing files are backed up as `*.backup.<timestamp>`)
+3. Symlinks `.zshrc`, `.tmux.conf`, `.tmux/plugins/tpm`, and `.ssh/config` into `$HOME` (existing files are backed up as `*.backup.<timestamp>`)
 4. Installs tmux plugins
 
 Then reload: `source ~/.zshrc` and `tmux source ~/.tmux.conf`.
