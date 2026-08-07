@@ -130,10 +130,10 @@ export PATH="/opt/homebrew/bin:$HOME/.local/bin:$HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 ### Deno
-export PATH="/Users/toan/.deno/bin:$PATH"
+export PATH="$HOME/.deno/bin:$PATH"
 
 ### Bun
-export PATH="/Users/toan/.bun/bin:$PATH"
+export PATH="$HOME/.bun/bin:$PATH"
 
 ### Kubernetes - Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
@@ -142,10 +142,10 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="$HOME/.aptos:$PATH"
 
 ### Add .NET Core SDK tools
-export PATH="$PATH:/Users/toan/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 ### Android SDK
-export ANDROID_HOME=/Users/toan/Library/Android/sdk
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 
 ### Add Android SDK tools
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin/"
@@ -162,19 +162,16 @@ export PATH="$HOME/.local/share/mise/shims:$PATH"
 eval "$(mise activate zsh)"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/toan/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 
 # Android SDK Build tools
 export PATH=$PATH:~/Library/Android/sdk/build-tools/36.0.0/
 
 ### Sublime Text
-export PATH="/Users/toan/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export PATH="$HOME/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
 # Added by Antigravity
-export PATH="/Users/toan/.antigravity/antigravity/bin:$PATH"
-
-# Added by Antigravity CLI installer
-export PATH="/Users/toan/.local/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
 # >>> grok installer >>>
 export PATH="$HOME/.grok/bin:$PATH"
