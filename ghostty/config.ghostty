@@ -1,0 +1,5 @@
+shell-integration-features = ssh-terminfo,ssh-env
+font-family = "FiraCode Nerd Font Mono"
+background-blur = macos-glass-regular
+theme = "light:Catppuccin Latte,dark:Catppuccin Frappe"
+confirm-close-surface = true
