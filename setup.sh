@@ -99,6 +99,7 @@ link_file "${DOTFILES_DIR}/.zshrc" "${HOME_DIR}/.zshrc"
 link_file "${DOTFILES_DIR}/.tmux.conf" "${HOME_DIR}/.tmux.conf"
 link_file "${DOTFILES_DIR}/.tmux/plugins/tpm" "${HOME_DIR}/.tmux/plugins/tpm"
 link_file "${DOTFILES_DIR}/.ssh/config" "${HOME_DIR}/.ssh/config"
+link_file "${DOTFILES_DIR}/ghostty/config.ghostty" "${HOME_DIR}/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
 
 install_tmux_plugins
 
