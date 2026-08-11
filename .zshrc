@@ -75,6 +75,7 @@ alias tm-bees-infra="tmux new -As 'BEES IaC' -n main -c ~/code/BEES/iac"
 alias tm-manga="tmux new -As TTMANGA -n web -c ~/code/TruyenTranhVN/web"
 alias tm-coralhub="tmux new -As CoralHub -n main -c ~/code/NerdCoder/coralhub"
 alias tm-mailgate="tmux new -As MailGate -n main -c ~/code/CommandOSS/MailGate"
+alias tm-dotfiles="tmux new -As dotfiles -n main -c ~/code/T/dotfiles"
 alias tm-spd-seed="tmux new -As 'SPD Seed' -n main -c ~/code/NerdCoder/spd-seed-analyzer"
 alias clear="if [[ '$TMUX' ]]; then clear; tmux clear-history; else clear; fi"
 
@@ -94,6 +95,20 @@ gwtj() {
   # 3. Only 'cd' if a selection was actually made
   if [[ -n "$target" ]]; then
     cd "$target"
+
+    # 4. If in tmux, offer to update session default directory for new windows
+    if [[ -n "$TMUX" ]]; then
+      echo -n "Update tmux default dir to $target? [y/N] "
+      read -r reply
+      if [[ "$reply" =~ ^[Yy]$ ]]; then
+        # Control mode + full redirect: set session path without nesting or TTY escape noise
+        local sid
+        sid=$(tmux display-message -p '#{session_id}')
+        TMUX= tmux -C attach-session -t "$sid" -c "$target" \; detach-client </dev/null >/dev/null 2>&1
+        tmux rename-window "$(basename "$target")"
+        echo "Updated tmux default directory and window name."
+      fi
+    fi
   fi
 }
 
