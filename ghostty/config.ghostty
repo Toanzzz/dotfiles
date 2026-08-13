@@ -1,5 +1,8 @@
-shell-integration-features = ssh-terminfo,ssh-env
-font-family = "FiraCode Nerd Font Mono"
 background-blur = macos-glass-regular
-theme = "light:Catppuccin Latte,dark:Catppuccin Frappe"
+bell-features = system,attention,title
 confirm-close-surface = false
+desktop-notifications = true
+font-family = "FiraCode Nerd Font Mono"
+shell-integration-features = ssh-terminfo,ssh-env
+theme = "light:Catppuccin Latte,dark:Catppuccin Frappe"
+notify-on-command-finish = unfocused
