@@ -72,7 +72,7 @@ function personalized_gitinit {
 # Tmux shortcuts
 alias tm-t-infra="tmux new -As Ton -n infra -c ~/code/T/infra"
 alias tm-bees-infra="tmux new -As 'BEES IaC' -n main -c ~/code/BEES/iac"
-alias tm-manga="tmux new -As TTMANGA -n web -c ~/code/TruyenTranhVN/web"
+alias tm-truyentranh="tmux new -As TTMANGA -n web -c ~/code/TruyenTranhVN/truyentranh"
 alias tm-coralhub="tmux new -As CoralHub -n main -c ~/code/NerdCoder/coralhub"
 alias tm-mailgate="tmux new -As MailGate -n main -c ~/code/CommandOSS/mailgate"
 alias tm-dotfiles="tmux new -As dotfiles -n main -c ~/code/T/dotfiles"
