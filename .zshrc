@@ -76,6 +76,7 @@ alias tm-truyentranh="tmux new -As TTMANGA -n web -c ~/code/TruyenTranhVN/truyen
 alias tm-coralhub="tmux new -As CoralHub -n main -c ~/code/NerdCoder/coralhub"
 alias tm-mailgate="tmux new -As MailGate -n main -c ~/code/CommandOSS/mailgate"
 alias tm-dotfiles="tmux new -As dotfiles -n main -c ~/code/T/dotfiles"
+alias tm-email-worker="tmux new -As email-worker -n main -c ~/code/NerdCoder/email-worker"
 alias tm-spd-seed="tmux new -As 'SPD Seed' -n main -c ~/code/NerdCoder/spd-seed-analyzer"
 alias clear="if [[ '$TMUX' ]]; then clear; tmux clear-history; else clear; fi"
 
