@@ -80,6 +80,35 @@ alias tm-email-worker="tmux new -As email-worker -n main -c ~/code/NerdCoder/ema
 alias tm-spd-seed="tmux new -As 'SPD Seed' -n main -c ~/code/NerdCoder/spd-seed-analyzer"
 alias clear="if [[ '$TMUX' ]]; then clear; tmux clear-history; else clear; fi"
 
+# Pull latest for every git repo under ~/code/repos
+gpullall() {
+  local root="${1:-$HOME/code/repos}"
+  local gitdir repo ok=0 failed=0
+
+  if [[ ! -d "$root" ]]; then
+    echo "Directory not found: $root" >&2
+    return 1
+  fi
+
+  while IFS= read -r -d '' gitdir; do
+    repo="${gitdir%/.git}"
+    echo "Updating: ${repo#$root/}"
+    if git -C "$repo" fetch --depth=1 && \
+       git -C "$repo" reset --hard '@{u}' && \
+       git -C "$repo" reflog expire --expire=now --all && \
+       git -C "$repo" gc --prune=now; then
+      ((ok++))
+    else
+      echo "  ✗ failed"
+      ((failed++))
+    fi
+    echo "----------------------------------------"
+  done < <(find "$root" -name .git -prune -print0 | sort -z)
+
+  echo "Done. $ok ok, $failed failed."
+  ((failed == 0))
+}
+
 # Git Worktrees Jump
 gwtj() {
   # 1. Check if we are inside a Git repository
