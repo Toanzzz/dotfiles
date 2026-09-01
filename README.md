@@ -14,12 +14,14 @@ cd ~/code/T/dotfiles
 
 1. Installs `starship`, `fzf`, `zsh-autosuggestions`, `tmux` via brew (skips what's present)
 2. Initializes the [tpm](https://github.com/tmux-plugins/tpm) submodule
-3. Symlinks `.zshrc`, `.tmux.conf`, `.tmux/plugins/tpm`, and `.ssh/config` into `$HOME` (existing files are backed up as `*.backup.<timestamp>`)
+3. Symlinks `.zshrc`, `.tmux.conf`, `.tmux/plugins/tpm`, `.ssh/config`, and `.config/starship.toml` into `$HOME` (existing files are backed up as `*.backup.<timestamp>`)
 4. Installs tmux plugins
 
 Then reload: `source ~/.zshrc` and `tmux source ~/.tmux.conf`.
 
 ## What's inside
+
+**`.config/starship.toml`** — starship prompt config (default template; uncomment to customize).
 
 **`.zshrc`** — starship prompt, fzf, autosuggestions, PATH for mise/bun/deno/ruby/android/etc., plus helpers:
 
