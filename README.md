@@ -14,7 +14,7 @@ cd ~/code/T/dotfiles
 
 1. Installs `starship`, `fzf`, `zsh-autosuggestions`, `tmux` via brew (skips what's present)
 2. Initializes the [tpm](https://github.com/tmux-plugins/tpm) submodule
-3. Symlinks `.zshrc`, `.tmux.conf`, `.tmux/plugins/tpm`, `.ssh/config`, and `.config/starship.toml` into `$HOME` (existing files are backed up as `*.backup.<timestamp>`)
+3. Symlinks `.zshrc`, `.tmux.conf`, `.tmux/plugins/tpm`, `.ssh/config`, `.config/starship.toml`, and `.claude/CLAUDE.md` into `$HOME` (existing files are backed up as `*.backup.<timestamp>`)
 4. Installs tmux plugins
 
 Then reload: `source ~/.zshrc` and `tmux source ~/.tmux.conf`.
@@ -35,6 +35,8 @@ Then reload: `source ~/.zshrc` and `tmux source ~/.tmux.conf`.
 | `tm-*` | open a tmux session for a given project |
 
 **`.tmux.conf`** — mouse on, 256 colors, `C-k` clear history, `C-q` kill session. Plugins: tmux-sensible, tmux-yank, tmux-prefix-highlight, sombre theme.
+
+**`.claude/CLAUDE.md`** — global instructions for Claude Code (attribution guidelines).
 
 ## License
 
