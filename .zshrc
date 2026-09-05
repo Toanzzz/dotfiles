@@ -79,6 +79,7 @@ alias tm-dotfiles="tmux new -As dotfiles -n main -c ~/code/T/dotfiles"
 alias tm-email-worker="tmux new -As email-worker -n main -c ~/code/NerdCoder/email-worker"
 alias tm-spd-seed="tmux new -As 'SPD Seed' -n main -c ~/code/NerdCoder/spd-seed-analyzer"
 alias tm-cmsless="tmux new -As 'cmsless' -n main -c ~/code/NerdCoder/cmsless"
+alias tm-social-indexer="tmux new -As 'social-indexer' -n main -c ~/code/NerdCoder/social-indexer"
 alias clear="if [[ '$TMUX' ]]; then clear; tmux clear-history; else clear; fi"
 
 # Pull latest for every git repo under ~/code/repos
@@ -224,3 +225,7 @@ export PATH="$HOME/.grok/bin:$PATH"
 fpath=(~/.grok/completions/zsh $fpath)
 autoload -Uz compinit && compinit -C
 # <<< grok installer <<<
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/toan/.local/bin:$PATH"
