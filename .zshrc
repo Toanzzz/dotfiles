@@ -78,6 +78,7 @@ alias tm-mailgate="tmux new -As MailGate -n main -c ~/code/CommandOSS/mailgate"
 alias tm-dotfiles="tmux new -As dotfiles -n main -c ~/code/T/dotfiles"
 alias tm-email-worker="tmux new -As email-worker -n main -c ~/code/NerdCoder/email-worker"
 alias tm-spd-seed="tmux new -As 'SPD Seed' -n main -c ~/code/NerdCoder/spd-seed-analyzer"
+alias tm-cmsless="tmux new -As 'cmsless' -n main -c ~/code/NerdCoder/cmsless"
 alias clear="if [[ '$TMUX' ]]; then clear; tmux clear-history; else clear; fi"
 
 # Pull latest for every git repo under ~/code/repos
